@@ -22,4 +22,4 @@ file.close()
 with open("C:/Programming/Learning/names.txt", "r") as file:
     #lines = file.readlines() # Read all file's lines and return a list.
     for line in file:
-        print("Hello,", line.rstrip()) # rstrip => right(end); lstrip => left(begining)
+                print("Hello,", line.rstrip()) # rstrip => right(end); lstrip => left(begining)
