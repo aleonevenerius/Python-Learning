@@ -1,3 +1,4 @@
+import os
 '''
 "r" - Read - Default value. Opens a file for reading, error if the file does not exist
 
@@ -35,10 +36,23 @@ with open("File.txt", "w") as f:
 
 with open("File.txt") as f:
     print(f.read())
-'''
+''
 try:
     f = open("myfile.txt", "x") # Create - will create a file, returns an error if the file exists
 except:
     print("Ops! This file exists.")
 else:
     print("Nothing wrong at the moment!")
+
+'''
+f = input("Inform a file name: ")
+if os.path.exists(f+".txt"):
+    os.remove(f+".txt")
+else:
+    print("It doesn't exist!")
+try:
+    os.rmdir("Folder")
+except:
+    print("It doesn't exist")
+else:
+    print("Fine")
