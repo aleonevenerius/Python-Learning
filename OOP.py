@@ -28,24 +28,26 @@ car1 = Car()
 print(car1.motor)
 
 del car1
-'''
-class Person:
+Class Person:
     def __init__(self ,name, age, city, country): # Built-in method. It executes whenever an object is used into the class.
         self.name = name
         self.age = age
         self.city = city
         self.country = country
-    # Withou it, you would need probably to set the properties manually for each object.
-
-'''
+    # Withou it, you would need probably to set the properties manually for each object.      ]]
 class Person:
     pass
 
 p1 = Person()
 p1.name = "Tobias"
 p1.age = 25
-'''
 
 p1 = Person("Thaly", 18, "New York", "EUA")
 print(p1.city)
+'''
+
+class Dog:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
 
