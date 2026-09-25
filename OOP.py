@@ -1,3 +1,4 @@
+
 '''
 OOP means Object-Oriented Programming and it uses classes and objects for a better orgnazation and reusabilitiy.
 
@@ -45,9 +46,14 @@ p1.age = 25
 p1 = Person("Thaly", 18, "New York", "EUA")
 print(p1.city)
 '''
-
 class Dog:
     def __init__(self, name, age):
         self.name = name
         self.age = age
+    def bark():
+	    print("Woof!")
 
+
+d1 = Dog("Buddy", 3)
+
+d1.bark()
