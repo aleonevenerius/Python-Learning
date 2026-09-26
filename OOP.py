@@ -50,10 +50,26 @@ class Dog:
     def __init__(self, name, age):
         self.name = name
         self.age = age
-    def bark():
-	    print("Woof!")
-
+    def bark(self):
+	    print(self.name + " says Woof!")
 
 d1 = Dog("Buddy", 3)
 
 d1.bark()
+
+# The 'self' parameter is a reference to the current instance of the class. It is used to acess properties and method that belong to the class.
+# It must be the first parameter.
+# Without it, python would not know which object's properties you want to acess
+# 'self' can call whenever you want
+# You can acess any property of the class using self.
+
+class Car:
+    def __init__(it, model, year, colour):
+        it.model = model
+        it.year = year
+        it.colour = colour
+    def ToTalkAboutIt(it):
+        print(f"My car is {it.model} release in {it.year}. The colour its is {it.colour}.")
+
+c1 = Car("Hyundai Azera", 2008, "Black")
+c1.ToTalkAboutIt()
