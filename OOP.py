@@ -73,3 +73,19 @@ class Car:
 
 c1 = Car("Hyundai Azera", 2008, "Black")
 c1.ToTalkAboutIt()
+
+#                   Class properties
+# Properties are variables that belong to a class. They store data for each object created from the class.
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+p1 = Person("Lara", 18)
+print(p1.name) # using dot to acess object properties
+print(p1.age)
+# Change property
+p1.age = 79
+print(p1.age)
+del p1.age # Deleting
+#print(p1.age) # Error
