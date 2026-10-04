@@ -73,13 +73,22 @@ class Car:
 
 c1 = Car("Hyundai Azera", 2008, "Black")
 c1.ToTalkAboutIt()
+'''
 
 #                   Class properties
 # Properties are variables that belong to a class. They store data for each object created from the class.
 class Person:
+    specie = "Homo-sapiens" # Class property
+    
     def __init__(self, name, age):
-        self.name = name
+        self.name = name # Instance property
         self.age = age
+
+
+Notes:
+* Properties within __init__() belong to each object. It called instace properties.
+* Properties outside __main__ and into a class itself is called class properties. Besides, that properties are shared by all objects.
+
 
 p1 = Person("Lara", 18)
 print(p1.name) # using dot to acess object properties
@@ -89,3 +98,46 @@ p1.age = 79
 print(p1.age)
 del p1.age # Deleting
 #print(p1.age) # Error
+
+'''
+class Person:
+    specie = "Human"
+
+    def __init__(self, name):
+        self.name = name
+
+p1 = Person('Lara')
+p2 = Person('Alexandre')
+
+print(p1.name)
+print(p2.name)
+print(p1.specie)
+print(p2.specie)
+
+# BE THOUGHTFULL
+# When you change a class property you change all object. You should be quite careful
+
+Person.specie = "Golden Monkey"
+print(p1.specie)
+print(p2.specie)
+
+#                       ADD NEW PROPERTIES
+p1.age = 18
+p1.city = "Colatina"
+p2.age = 19
+p2.city = p1.city
+
+print(p1.city)
+print(p1.age)
+print(p2.city)
+print(p2.age)
+
+class Student:
+    def __init__(self, name, grade):
+        self.name = name
+        self.grade = grade
+
+s1 = Student("Anna", "A")
+print(f"Student: {s1.name}\nGrade: {s1.grade}")
+s1.grade = "B"
+print(f"Oops... It isn't correct. I apologize. The correct grade is {s1.grade}")
